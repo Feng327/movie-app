@@ -9,7 +9,7 @@ export const homeSlice = createSlice({
         getApiConfiguration: (state, action) => {
             state.url = action.payload;
         },
-      
+        
     },
 });
 
