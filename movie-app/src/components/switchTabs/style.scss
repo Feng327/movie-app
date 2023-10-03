@@ -1,0 +1,82 @@
+@import "../../mixin.scss";
+
+
+.switchingTabs {
+        height: 28px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 8px;
+        font-size: xx-small;
+        max-width:20rem;
+    @include sm{
+        height: 34px;
+        margin-top: 5px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 2px;
+        max-width: 30rem
+    }
+    .tabItems {
+        display: flex;
+        align-items: center;
+        height: 10px;
+        font-size:x-small;
+        position: relative;
+        :hover{
+            color: red;
+        }
+
+        @include sm{
+            display: flex;
+            align-items: center;
+            height: 30px;
+            position: relative;
+        }
+       
+        .tabItem {
+            height: 0%;
+            display: flex;
+            align-items: center;
+            font-size: xx-small;
+            padding:2px;
+            justify-content: center;
+            width: 80px;
+            z-index: 1;
+           
+           @include sm{
+            //    height: 100%;
+            //    display: flex;
+            //    align-items: center;
+            //    justify-content: center;
+               width: 100px;
+               // color: var(--black);
+               font-size: 14px;
+               position: relative;
+               z-index: 1;
+               cursor: pointer;
+               transition: color ease 0.3s;
+               &.active {
+                   color: white;
+               }
+           }
+        }
+        .movingBg {
+            // height: 20px;
+            // width: 60px;
+            // border-radius: 15px;
+            // background-image: var(--gradient);
+            // position: absolute;
+            // left: 0;
+
+           
+            @include sm{
+                height: 30px;
+                width: 100px;
+                border-radius: 15px;
+                background-image: var(--gradient);
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}
