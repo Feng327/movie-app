@@ -5,9 +5,9 @@ import { fetchDataFromApi } from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration} from "./store/homeSlice";
 
-import Header from "./components/header/Header";
+import Header from "./components/header/header";
 import Home from "./pages/home/Home";
-
+import Footer from "./components/footer/footer"
 
 
 function App() {
@@ -42,6 +42,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                
             </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 }
