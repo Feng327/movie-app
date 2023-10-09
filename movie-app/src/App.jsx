@@ -8,7 +8,7 @@ import { getApiConfiguration} from "./store/homeSlice";
 import Header from "./components/header/header";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/footer"
-
+import About from "./pages/about/About";
 
 function App() {
     const dispatch = useDispatch();
@@ -40,7 +40,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-               
+                <Route path="/about" element={<About />} />
             </Routes>
             <Footer/>
         </BrowserRouter>
