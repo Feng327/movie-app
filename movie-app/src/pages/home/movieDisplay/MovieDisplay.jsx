@@ -34,7 +34,7 @@ const MovieDisplay = () => {
     return (
         <div className="carouselSection">
             <ContentWrapper>
-                <span className="carouselTitle">{selectedTab}</span>
+                {/* <span className="carouselTitle">{selectedTab}</span> */}
                 <SwitchTabs
                     data={["Now Playing", "Top Rated", "Popular", "Upcoming"]}
                     onTabChange={onTabChange}
