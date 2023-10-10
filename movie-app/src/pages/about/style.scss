@@ -1,0 +1,57 @@
+@import "../../mixin.scss";
+
+
+.about{
+    min-height: 100vh;
+    height: 700px;
+    padding-top: 100px;
+    .contentWrapper {
+        text-align: center;
+        color: var(--black-light);
+        display: flex;
+        flex-direction: column;
+        .title {
+            font-size: 35px;
+            margin-bottom: 30px;
+            line-height: 24px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            // @include ellipsis(1);
+            @include md {
+                font-size: 30px;
+            }
+        }
+        .content{
+            text-align: left;
+            font-size: 15px;
+            color: aliceblue;
+            line-height: 30px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            @include md{
+                font-size: 20px;
+                line-height: 50px;
+                margin-top: 50px;
+            }
+        }
+        .citation{
+            display: flex;
+        }
+        .disclaimer{
+            font-size: 10px;
+            color: rgb(189, 214, 235);
+        }
+        .tmdb-logo{
+            padding-left: 10px;
+            width:12rem;
+        }
+        
+    }
+}
+
+
+
+
+
+
