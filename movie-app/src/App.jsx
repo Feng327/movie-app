@@ -9,7 +9,7 @@ import Header from "./components/header/header";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/footer"
 import About from "./pages/about/About";
-
+import Details from "./pages/details/Details";
 function App() {
     const dispatch = useDispatch();
     const { url } = useSelector((state) => state.home);
@@ -41,6 +41,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/:mediaType/:id" element={<Details />} />
             </Routes>
             <Footer/>
         </BrowserRouter>
