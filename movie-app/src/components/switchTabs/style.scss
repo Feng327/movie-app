@@ -1,4 +1,4 @@
-@import "../../mixin.scss";
+@import "../../mixins.scss";
 
 
 .switchingTabs {
@@ -8,14 +8,13 @@
         padding: 8px;
         font-size: xx-small;
         max-width:20rem;
-        margin-top: 16px;
-        margin-bottom: 16px;
     @include sm{
         height: 34px;
+        margin-top: 5px;
         background-color: white;
         border-radius: 20px;
         padding: 2px;
-        max-width: 25.5rem
+        max-width: 30rem
     }
     .tabItems {
         display: flex;
@@ -45,12 +44,7 @@
             z-index: 1;
            
            @include sm{
-            //    height: 100%;
-            //    display: flex;
-            //    align-items: center;
-            //    justify-content: center;
                width: 100px;
-               // color: var(--black);
                font-size: 14px;
                position: relative;
                z-index: 1;
@@ -62,14 +56,7 @@
            }
         }
         .movingBg {
-            // height: 20px;
-            // width: 60px;
-            // border-radius: 15px;
-            // background-image: var(--gradient);
-            // position: absolute;
-            // left: 0;
-
-           
+            
             @include sm{
                 height: 30px;
                 width: 100px;

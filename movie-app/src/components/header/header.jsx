@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-import About from "../../pages/about/About";
+
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
@@ -39,14 +39,11 @@ const Header = () => {
         };
     }, [lastScrollY]);
 
-  
-
     const openMobileMenu = () => {
         setMobileMenu(true);
     };
 
     const navigationHandler = (type) => {
-       
         if (type === 'home'){
             navigate('/home')
         } else if (type ==='about'){

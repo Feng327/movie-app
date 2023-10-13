@@ -1,4 +1,4 @@
-@import "../../mixin.scss";
+@import "../../mixins.scss";
 
 
 .about{
@@ -17,7 +17,6 @@
             color: white;
             display: flex;
             flex-direction: column;
-            // @include ellipsis(1);
             @include md {
                 font-size: 30px;
             }

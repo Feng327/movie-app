@@ -5,11 +5,13 @@ import { fetchDataFromApi } from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration} from "./store/homeSlice";
 
-import Header from "./components/header/header";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
-import Footer from "./components/footer/footer"
 import About from "./pages/about/About";
+import Favorite from "./pages/favorites/Favorites";
 import Details from "./pages/details/Details";
+
 function App() {
     const dispatch = useDispatch();
     const { url } = useSelector((state) => state.home);
@@ -33,7 +35,6 @@ function App() {
         });
     };
 
-   
 
     return (
         <BrowserRouter>
@@ -41,9 +42,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/favorites" element={<Favorite />} />
                 <Route path="/:mediaType/:id" element={<Details />} />
             </Routes>
-            <Footer/>
+            <Footer />
         </BrowserRouter>
     );
 }

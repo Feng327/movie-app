@@ -7,11 +7,13 @@ import "./style.scss";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import useFetch from "../../../hooks/useFetch";
+
 import CircleRating from "../../../components/circleRating/CircleRating";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
 import { PlayIcon } from "../Playbtn";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
+import FavButton from "../../../components/favBtn/FavButton";
 
 const DetailsBanner = ({ video, crew }) => {
     const [show, setShow] = useState(false);
@@ -73,13 +75,14 @@ const DetailsBanner = ({ video, crew }) => {
                                             {data.tagline}
                                         </div>
 
-                                        {/* <Genres data={_genres} /> */}
-
                                         <div className="row">
                                             <CircleRating
                                                 rating={data.vote_average.toFixed(
                                                     1
                                                 )}
+                                            />
+                                            <FavButton
+                                                characterObj={data}
                                             />
                                             <div
                                                 className="playbtn"
@@ -89,9 +92,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                 }}
                                             >
                                                 <PlayIcon />
-                                                {/* <span className="text">
-                                                    Watch Trailer
-                                                </span> */}
+                                                
                                             </div>
                                         </div>
 

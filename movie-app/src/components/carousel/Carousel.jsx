@@ -12,6 +12,7 @@ import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
 import "./style.scss";
+import FavButton from "../favBtn/FavButton";
 
 const Carousel = ({ data, loading, endpoint, title }) => {
     const carouselContainer = useRef();
@@ -42,6 +43,11 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                 </div>
             </div>
         );
+    };
+
+    const handleFavButtonClick = (e) => {
+        e.preventDefault(); // Prevent the default behavior (navigation)
+        // Toggle the favorite button as needed
     };
 
     return (
@@ -77,10 +83,11 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                                     <div className="posterBlock">
                                         <Img src={posterUrl} />
                                         <CircleRating
-                                            rating={item.vote_average.toFixed(
-                                                1
-                                            )}
+                                            rating={item.vote_average.toFixed(1)}
                                         />
+                                        {/* <div className="favButton">
+                            
+                                        </div> */}
                                     </div>
                                     <div className="textBlock">
                                         <span className="title">

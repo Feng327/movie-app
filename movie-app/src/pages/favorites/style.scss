@@ -1,0 +1,47 @@
+@import "../../mixins.scss";
+
+.favPage {
+    min-height: 700px;
+    padding-top: 100px;
+    .noFav {
+        text-align: left;
+        font-size: 15px;
+        color: aliceblue;
+        line-height: 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        @include md{
+            font-size: 20px;
+            line-height: 50px;
+            margin-top: 50px;
+        }
+    }
+
+    .pageTitle {
+        font-size: 35px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+            line-height: 24px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            @include md {
+                font-size: 30px;
+            }
+    }
+    .content {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+        margin-top:50px;
+        @include md {
+            gap: 20px;
+        }
+        .movieCard {
+            .posterBlock {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
